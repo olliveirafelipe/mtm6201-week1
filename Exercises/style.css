@@ -1,0 +1,23 @@
+.par{
+
+    border: 1px solid red;
+    
+    padding: 20px;
+    
+    display: flex;
+    
+    flex-direction: column;
+    
+    align-items: flex-end;
+    
+    }
+    
+    .box{
+    
+    padding: 20px;
+    
+    border: 1px solid black;
+    
+    text-align: center;
+    
+    }
