@@ -1,48 +1,50 @@
-/* Reset e Estilos Globais */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+
 body {
     font-family: Arial, sans-serif;
     color: #333;
     background-color: #f8f9fa;
     line-height: 1.6;
 }
+
 header, footer {
     text-align: center;
     padding: 1.5rem;
 }
 
-/* Header */
 .logo {
     font-size: 1.8rem;
     font-weight: bold;
     letter-spacing: 2px;
 }
+
 nav ul {
     list-style: none;
     display: flex;
     gap: 2rem;
     justify-content: center;
 }
+
 nav a {
     color: #333;
     text-decoration: none;
     font-weight: bold;
     transition: color 0.3s;
 }
+
 nav a:hover {
     color: #007bff;
 }
 
-/* Hero / Banner */
 .hero {
     position: relative;
     width: 100%;
     height: 400px;
-    background-image: url('banner-image.jpg'); /* Substitua pelo caminho do arquivo */
+    background-image: url('https://raw.githubusercontent.com/olliveirafelipe/mtm6201-week1/refs/heads/main/06%20Midterm%20Project/images/banner.jpg');
     background-size: cover;
     background-position: center;
     display: flex;
@@ -52,38 +54,42 @@ nav a:hover {
     text-align: center;
 }
 
-/* Texto Sobre o Banner */
-.hero {
-    position: relative;
-    width: 100%;
-    height: 400px;
-    background-image: url('banner-image.jpg'); /* Substitua pelo caminho do arquivo */
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #fff;
-    text-align: center;
+@keyframes wave {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
 }
 
-/* Texto Sobre o Banner */
-.hero-text {
-    position: absolute;
-    color: #fff;
-    background: rgba(0, 0, 0, 0.5); /* Fundo semitransparente para legibilidade */
-    padding: 1rem 2rem;
-    border-radius: 8px;
-}
-.hero h1 {
-    font-size: 2.5rem;
-    margin-bottom: 0.5rem;
-}
-.hero p {
-    font-size: 1.2rem;
+.hero-text span {
+    display: inline-block;
+    font-size: inherit;
+    animation: wave 1.5s ease-in-out infinite;
 }
 
-/* Sobre Mim */
+.hero-text span:nth-child(1) { animation-delay: 0s; }
+.hero-text span:nth-child(2) { animation-delay: 0.1s; }
+.hero-text span:nth-child(3) { animation-delay: 0.2s; }
+.hero-text span:nth-child(4) { animation-delay: 0.3s; }
+.hero-text span:nth-child(5) { animation-delay: 0.4s; }
+.hero-text span:nth-child(6) { animation-delay: 0.5s; }
+.hero-text span:nth-child(7) { animation-delay: 0.6s; }
+.hero-text span:nth-child(8) { animation-delay: 0.7s; }
+.hero-text span:nth-child(9) { animation-delay: 0.8s; }
+.hero-text span:nth-child(10) { animation-delay: 0.9s; }
+.hero-text span:nth-child(11) { animation-delay: 1s; }
+.hero-text span:nth-child(12) { animation-delay: 1.1s; }
+.hero-text span:nth-child(13) { animation-delay: 1.2s; }
+.hero-text span:nth-child(14) { animation-delay: 1.3s; }
+.hero-text span:nth-child(15) { animation-delay: 1.4s; }
+.hero-text span:nth-child(16) { animation-delay: 1.5s; }
+.hero-text span:nth-child(17) { animation-delay: 1.6s; }
+.hero-text span:nth-child(18) { animation-delay: 1.7s; }
+.hero-text span:nth-child(19) { animation-delay: 1.8s; }
+.hero-text span:nth-child(20) { animation-delay: 1.9s; }
+.hero-text span:nth-child(21) { animation-delay: 2s; }
+
+.hero h1 { font-size: 2.5rem; margin-bottom: 0.5rem; }
+.hero p { font-size: 1.2rem; }
+
 .about {
     display: flex;
     align-items: center;
@@ -93,35 +99,42 @@ nav a:hover {
     max-width: 1200px;
     margin: 0 auto;
 }
+
 .profile-img {
     width: 180px;
     height: 180px;
     border-radius: 50%;
     object-fit: cover;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
+    transition: transform 0.5s ease;
 }
+
+.profile-img:hover { transform: rotate(360deg); }
+
 .about-text h2 {
     font-size: 2.5rem;
     color: #333;
     margin-bottom: 1rem;
 }
+
 .about-text p {
     margin-top: 0.5rem;
     color: #555;
     line-height: 1.7;
 }
 
-/* Galeria de Projetos */
 .projects {
     padding: 3rem 2rem;
     text-align: center;
     background-color: #ffffff;
 }
+
 .projects h2 {
     font-size: 2.2rem;
     margin-bottom: 2rem;
     color: #333;
 }
+
 .project-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -129,6 +142,7 @@ nav a:hover {
     max-width: 1200px;
     margin: 0 auto;
 }
+
 .project img {
     width: 100%;
     height: auto;
@@ -136,10 +150,12 @@ nav a:hover {
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s;
 }
+
 .project img:hover {
     transform: scale(1.05);
     box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.15);
 }
+
 .see-more {
     margin-top: 2rem;
     padding: 0.7rem 2rem;
@@ -150,20 +166,20 @@ nav a:hover {
     cursor: pointer;
     transition: background-color 0.3s;
 }
-.see-more:hover {
-    background-color: #555;
-}
 
-/* Contato */
+.see-more:hover { background-color: #555; }
+
 .contact {
     padding: 3rem 2rem;
     text-align: center;
     background-color: #f0f0f0;
 }
+
 .contact h2 {
     font-size: 2.2rem;
     margin-bottom: 1.5rem;
 }
+
 .form-group {
     display: flex;
     flex-direction: column;
@@ -172,6 +188,7 @@ nav a:hover {
     max-width: 800px;
     margin: 0 auto;
 }
+
 .form-group input, textarea {
     width: 100%;
     padding: 1rem;
@@ -180,11 +197,16 @@ nav a:hover {
     font-size: 1rem;
     transition: border-color 0.3s;
 }
+
+textarea { margin-top: 1rem; }
+
 .form-group input:focus, textarea:focus {
     border-color: #007bff;
     outline: none;
 }
+
 button {
+    margin-top: 1rem;
     padding: 0.7rem 2rem;
     background-color: #333;
     color: #fff;
@@ -193,30 +215,30 @@ button {
     cursor: pointer;
     transition: background-color 0.3s;
 }
-button:hover {
-    background-color: #555;
-}
 
-/* Footer com Links Sociais */
+button:hover { background-color: #555; }
+
 footer {
     padding: 2rem;
     text-align: center;
     background-color: #333;
     color: #fff;
 }
+
 footer p {
     margin-bottom: 1rem;
     font-size: 1.2rem;
     color: #bbb;
 }
+
 .social-links a {
     color: #fff;
     font-size: 1.5rem;
     margin: 0 0.5rem;
     transition: transform 0.3s, color 0.3s;
 }
+
 .social-links a:hover {
     color: #007bff;
     transform: scale(1.1);
 }
-
